@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>NCCPA Jankalyan Foundation | हर घर तक सेवा, हर दिल में विश्वास</title>
+
+  <meta name="description"
+        content="NCCPA Jankalyan Foundation - National Council for Community Promotion & Awareness. शिक्षा, स्वास्थ्य, महिला सशक्तिकरण, कौशल विकास, ग्रामीण विकास और जनसेवा।">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background: #f7f9fc;
+      color: #222;
+    }
+
+    /* TOP BAR */
+    .topbar {
+      background: #082c4c;
+      color: white;
+      padding: 8px 5%;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      font-size: 14px;
+    }
+
+    /* HEADER */
+    header {
+      background: white;
+      padding: 14px 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 10px rgba(0,0,0,.08);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-circle {
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: #0b5d3b;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 19px;
+      border: 4px solid #f39c12;
+    }
+
+    .logo-text h2 {
+      color: #082c4c;
+      font-size: 20px;
+    }
+
+    .logo-text p {
+      color: #0b5d3b;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #222;
+      margin-left: 18px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #0b5d3b;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 560px;
+      padding: 90px 7%;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(135deg, #082c4c, #0b5d3b);
+      color: white;
+    }
+
+    .hero-content {
+      max-width: 850px;
+    }
+
+    .hero h1 {
+      font-size: 46px;
+      margin-bottom: 15px;
+    }
+
+    .hero h2 {
+      font-size: 23px;
+      color: #ffd166;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      max-width: 700px;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 24px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+
+    .btn-primary {
+      background: #f39c12;
+      color: white;
+    }
+
+    .btn-light {
+      background: white;
+      color: #082c4c;
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 70px 7%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .section-title h2 {
+      color: #082c4c;
+      font-size: 32px;
+    }
+
+    .section-title p {
+      color: #666;
+      margin-top: 8px;
+    }
+
+    /* ABOUT */
+    .about {
+      background: white;
+    }
+
+    .about-box {
+      max-width: 950px;
+      margin: auto;
+      text-align: center;
+      font-size: 17px;
+    }
+
+    /* STATS */
+    .stats {
+      background: #eef5f1;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .stat {
+      background: white;
+      padding: 30px 15px;
+      text-align: center;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,.06);
+    }
+
+    .stat h3 {
+      font-size: 32px;
+      color: #0b5d3b;
+    }
+
+    /* SERVICES */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .service {
+      background: white;
+      padding: 28px;
+      border-radius: 14px;
+      box-shadow: 0 4px 15px rgba(0,0,0,.07);
+      transition: .3s;
+    }
+
+    .service:hover {
+      transform: translateY(-5px);
+    }
+
+    .service-icon {
+      font-size: 38px;
+      margin-bottom: 12px;
+    }
+
+    .service h3 {
+      color: #082c4c;
+      margin-bottom: 8px;
+    }
+
+    /* MISSION */
+    .mission {
+      background: #082c4c;
+      color: white;
+      text-align: center;
+    }
+
+    .mission h2 {
+      color: #ffd166;
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .mission p {
+      font-size: 21px;
+      max-width: 850px;
+      margin: auto;
+    }
+
+    /* SURVEY */
+    .survey {
+      background: white;
+      text-align: center;
+    }
+
+    .survey-box {
+      max-width: 800px;
+      margin: auto;
+      padding: 35px;
+      border-radius: 16px;
+      background: #f2f7f5;
+    }
+
+    /* LOGIN */
+    .login-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .login-card {
+      background: white;
+      padding: 28px 15px;
+      text-align: center;
+      border-radius: 14px;
+      box-shadow: 0 4px 15px rgba(0,0,0,.08);
+    }
+
+    .login-card h3 {
+      color: #082c4c;
+      margin-bottom: 15px;
+    }
+
+    /* TEAM */
+    .team {
+      background: #eef5f1;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .team-card {
+      background: white;
+      padding: 30px;
+      text-align: center;
+      border-radius: 14px;
+    }
+
+    .team-avatar {
+      width: 90px;
+      height: 90px;
+      margin: auto auto 15px;
+      border-radius: 50%;
+      background: #0b5d3b;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    /* CONTACT */
+    .contact {
+      background: white;
+      text-align: center;
+    }
+
+    .contact p {
+      margin: 8px 0;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #061f35;
+      color: white;
+      text-align: center;
+      padding: 35px 7%;
+    }
+
+    footer p {
+      margin: 7px 0;
+    }
+
+    .whatsapp {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: #25d366;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 25px;
+      text-decoration: none;
+      box-shadow: 0 4px 15px rgba(0,0,0,.25);
+      z-index: 2000;
+    }
+
+    /* MOBILE */
+    @media(max-width: 800px) {
+
+      header {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      nav {
+        text-align: center;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 5px 7px;
+      }
+
+      .hero {
+        padding: 65px 7%;
+      }
+
+      .hero h1 {
+        font-size: 32px;
+      }
+
+      .hero h2 {
+        font-size: 19px;
+      }
+
+      .stats,
+      .services-grid,
+      .login-grid,
+      .team-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .topbar {
+        justify-content: center;
+        text-align: center;
+        gap: 5px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <span>📢 NCCPA Jankalyan Foundation</span>
+  <span>📞 8084284106 | 7903998184</span>
+</div>
+
+<!-- HEADER -->
+<header>
+
+  <div class="logo">
+    <div class="logo-circle">NCCPA</div>
+
+    <div class="logo-text">
+      <h2>NCCPA JANKALAYAN</h2>
+      <p>FOUNDATION</p>
+    </div>
+  </div>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#survey">Survey</a>
+    <a href="#login">Login</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+</header>
+
+
+<!-- HERO -->
+<section class="hero" id="home">
+
+  <div class="hero-content">
+
+    <h1>NCCPA Jankalyan Foundation</h1>
+
+    <h2>National Council for Community Promotion & Awareness</h2>
+
+    <p>
+      शिक्षा, स्वास्थ्य, रोजगार, महिला सशक्तिकरण,
+      कौशल विकास, ग्रामीण विकास और जनसेवा के लिए
+      समर्पित Section 8 Non-Government Organization.
+    </p>
+
+    <a href="#about" class="btn btn-primary">
+      हमारे बारे में
+    </a>
+
+    <a href="#contact" class="btn btn-light">
+      संपर्क करें
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- ABOUT -->
+<section class="about" id="about">
+
+  <div class="section-title">
+    <h2>हमारे बारे में</h2>
+    <p>जनसेवा के लिए समर्पित एक सामाजिक संस्था</p>
+  </div>
+
+  <div class="about-box">
+
+    <p>
+      <b>NCCPA Jankalyan Foundation</b> एक Section 8
+      Non-Government Organization है, जिसका उद्देश्य
+      समाज के जरूरतमंद लोगों तक शिक्षा, स्वास्थ्य,
+      सरकारी योजनाओं की जानकारी, कौशल विकास और
+      सामाजिक सहायता पहुँचाना है।
+    </p>
+
+    <br>
+
+    <p>
+      हमारा प्रयास है कि ग्रामीण एवं कमजोर वर्ग के
+      लोगों को उनके अधिकारों और उपलब्ध सरकारी
+      सुविधाओं की जानकारी सरल तरीके से मिले।
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- STATS -->
+<section class="stats">
+
+  <div class="stat">
+    <h3>2023</h3>
+    <p>स्थापना वर्ष</p>
+  </div>
+
+  <div class="stat">
+    <h3>8+</h3>
+    <p>मुख्य सेवा क्षेत्र</p>
+  </div>
+
+  <div class="stat">
+    <h3>24×7</h3>
+    <p>जनसेवा भावना</p>
+  </div>
+
+  <div class="stat">
+    <h3>100%</h3>
+    <p>सामाजिक उद्देश्य</p>
+  </div>
+
+</section>
+
+
+<!-- SERVICES -->
+<section id="services">
+
+  <div class="section-title">
+
+    <h2>हमारी सेवाएँ</h2>
+
+    <p>
+      समाज के विभिन्न वर्गों के लिए हमारी प्रमुख गतिविधियाँ
+    </p>
+
+  </div>
+
+
+  <div class="services-grid">
+
+    <div class="service">
+      <div class="service-icon">📚</div>
+      <h3>शिक्षा</h3>
+      <p>
+        शिक्षा जागरूकता, डिजिटल शिक्षा और जरूरतमंद
+        विद्यार्थियों के सहयोग के लिए कार्य।
+      </p>
+    </div>
+
+
+    <div class="service">
+      <div class="service-icon">🏥</div>
+      <h3>स्वास्थ्य</h3>
+      <p>
+        स्वास्थ्य जागरूकता, स्वास्थ्य शिविर और
+        ग्रामीण स्वास्थ्य सहायता।
+      </p>
+    </div>
+
+
+    <div class="service">
+      <div class="service-icon">👩</div>
+      <h3>महिला सशक्तिकरण</h3>
+      <p>
+        महिलाओं को आत्मनिर्भर बनाने और उनके
+        अधिकारों के प्रति जागरूक करने का प्रयास।
+      </p>
+    </div>
+
+
+    <div class="service">
+      <div class="service-icon">💼</div>
+      <h3>रोजगार एवं कौशल</h3>
+      <p>
+        कौशल विकास, रोजगार मार्गदर्शन और
+        स्वरोजगार जागरूकता।
+      </p>
+    </div>
+
+
+    <div class="service">
+      <div class="service-icon">🌱</div>
+      <h3>पर्यावरण</h3>
+      <p>
+        पर्यावरण संरक्षण, पौधारोपण और
+        स्वच्छता जागरूकता।
+      </p>
+    </div>
+
+
+    <div class="service">
+      <div class="service-icon">⚖️</div>
+      <h3>मानव अधिकार</h3>
+      <p>
+        नागरिक अधिकारों और सामाजिक न्याय के
+        प्रति जागरूकता।
+      </p>
+    </div>
+
+
+    <div class="service">
+      <div class="service-icon">🏛️</div>
+      <h3>सरकारी योजनाएँ</h3>
+      <p>
+        पात्र लोगों तक सरकारी योजनाओं की
+        जानकारी पहुँचाने का प्रयास।
+      </p>
+    </div>
+
+
+    <div class="service">
+      <div class="service-icon">🤝</div>
+      <h3>गरीब सहायता</h3>
+      <p>
+        जरूरतमंद परिवारों के लिए सामाजिक
+        सहायता और राहत गतिविधियाँ।
+      </p>
+    </div>
+
+
+    <div class="service">
+      <div class="service-icon">📢</div>
+      <h3>जन-जागरूकता</h3>
+      <p>
+        सामाजिक समस्याओं और नागरिक जिम्मेदारियों
+        के प्रति जागरूकता अभियान।
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- MISSION -->
+<section class="mission">
+
+  <h2>हमारा मिशन</h2>
+
+  <p>
+    “हर घर तक सेवा, हर दिल में विश्वास”
+  </p>
+
+  <br>
+
+  <p>
+    “आपातकाल हो या अधिकार – हम हैं तैयार”
+  </p>
+
+</section>
+
+
+<!-- DIGITAL SURVEY -->
+<section class="survey" id="survey">
+
+  <div class="section-title">
+
+    <h2>Digital Survey System</h2>
+
+    <p>
+      ग्रामीण क्षेत्रों में डिजिटल सर्वे एवं जनकल्याण डेटा प्रबंधन
+    </p>
+
+  </div>
+
+
+  <div class="survey-box">
+
+    <h3>📋 NCCPA Digital Survey</h3>
+
+    <p>
+      Surveyor द्वारा लाभार्थी एवं परिवार की
+      आवश्यक जानकारी डिजिटल रूप से दर्ज की जा सकेगी।
+    </p>
+
+    <br>
+
+    <a href="login.html" class="btn btn-primary">
+      Surveyor Login
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- LOGIN -->
+<section id="login">
+
+  <div class="section-title">
+
+    <h2>Portal Login</h2>
+
+    <p>
+      अधिकृत सदस्य अपने संबंधित Dashboard में Login करें।
+    </p>
+
+  </div>
+
+
+  <div class="login-grid">
+
+    <div class="login-card">
+
+      <h3>👨‍💼 Admin</h3>
+
+      <p>पूरे सिस्टम का प्रबंधन</p>
+
+      <br>
+
+      <a href="login.html" class="btn btn-primary">
+        Admin Login
+      </a>
+
+    </div>
+
+
+    <div class="login-card">
+
+      <h3>📋 Surveyor</h3>
+
+      <p>Digital Survey एवं Field Data</p>
+
+      <br>
+
+      <a href="login.html" class="btn btn-primary">
+        Surveyor Login
+      </a>
+
+    </div>
+
+
+    <div class="login-card">
+
+      <h3>🤝 Volunteer</h3>
+
+      <p>Activities एवं Field Work</p>
+
+      <br>
+
+      <a href="login.html" class="btn btn-primary">
+        Volunteer Login
+      </a>
+
+    </div>
+
+
+    <div class="login-card">
+
+      <h3>👤 Member</h3>
+
+      <p>Member Profile एवं Activities</p>
+
+      <br>
+
+      <a href="login.html" class="btn btn-primary">
+        Member Login
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- TEAM -->
+<section class="team">
+
+  <div class="section-title">
+
+    <h2>हमारी टीम</h2>
+
+    <p>NCCPA Jankalyan Foundation</p>
+
+  </div>
+
+
+  <div class="team-grid">
+
+    <div class="team-card">
+
+      <div class="team-avatar">
+        M
+      </div>
+
+      <h3>Mukesh Kumar Sharma</h3>
+
+      <p>Founder & Director</p>
+
+    </div>
+
+
+    <div class="team-card">
+
+      <div class="team-avatar">
+        P
+      </div>
+
+      <h3>Puja Kumari</h3>
+
+      <p>Secretary / Director</p>
+
+    </div>
+
+
+    <div class="team-card">
+
+      <div class="team-avatar">
+        P
+      </div>
+
+      <h3>Pradeep Kumar Rajak</h3>
+
+      <p>Treasurer</p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+
+  <div class="section-title">
+
+    <h2>संपर्क करें</h2>
+
+    <p>हमसे जुड़ने के लिए संपर्क करें</p>
+
+  </div>
+
+
+  <p>📍 <b>Registered Office:</b> Bochgaon, Purnea, Bihar – 854330</p>
+
+  <p>📞 <b>Phone:</b> 8084284106 / 7903998184</p>
+
+  <p>📧 <b>Email:</b> infonccpa@gmail.com</p>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+  <h3>NCCPA Jankalyan Foundation</h3>
+
+  <p>
+    National Council for Community Promotion & Awareness
+  </p>
+
+  <p>
+    Section 8 Non-Government Organization
+  </p>
+
+  <p>
+    © 2026 NCCPA Jankalyan Foundation. All Rights Reserved.
+  </p>
+
+</footer>
+
+
+<!-- WHATSAPP -->
+<a
+  class="whatsapp"
+  href="https://wa.me/918084281046"
+  target="_blank"
+  aria-label="WhatsApp">
+  💬
+</a>
+
+</body>
+</html>
